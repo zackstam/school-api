@@ -1,0 +1,263 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-09-23T11:05:37.882Z",
+	"__export_source": "insomnia.desktop.app:v5.12.4",
+	"resources": [
+		{
+			"_id": "wrk_e2edeec77c264822bda11656d9aa423c",
+			"created": 1534661025732,
+			"description": "",
+			"modified": 1534661025732,
+			"name": "school-api",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_817625f06c56471690b6efc73d1379a8",
+			"color": null,
+			"created": 1534661025765,
+			"data": {},
+			"isPrivate": false,
+			"modified": 1534661025765,
+			"name": "New Environment",
+			"parentId": "wrk_e2edeec77c264822bda11656d9aa423c",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_ceb8d975941e4e88a2a05503f8512581",
+			"cookies": [],
+			"created": 1534661025767,
+			"modified": 1534661025767,
+			"name": "Default Jar",
+			"parentId": "wrk_e2edeec77c264822bda11656d9aa423c",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_4daad3e310d04a41901348da1c3fa794",
+			"created": 1534661092735,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1534661092735,
+			"modified": 1535874194640,
+			"name": "auth",
+			"parentId": "wrk_e2edeec77c264822bda11656d9aa423c",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_e2fc079abaab4e72aac0dc57587add8d",
+			"created": 1534663299162,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1534663299162,
+			"modified": 1534663299162,
+			"name": "students",
+			"parentId": "wrk_e2edeec77c264822bda11656d9aa423c",
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_7832abddf0434144bf09eea6b5dad4cb",
+			"color": null,
+			"created": 1534661036082,
+			"data": {
+				"base_url": "http://localhost:3333"
+			},
+			"isPrivate": false,
+			"modified": 1534661150472,
+			"name": "localhost",
+			"parentId": "env_817625f06c56471690b6efc73d1379a8",
+			"_type": "environment"
+		},
+		{
+			"_id": "req_7a62587ac12e4dca816ef7839d322472",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"u1@mail.com\",\n\t\"password\": \"pass-u1\"\n}"
+			},
+			"created": 1534661099546,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_5d6ecaacf2164d47ae247af3b8d0c469",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1534661099546,
+			"method": "POST",
+			"modified": 1535875323919,
+			"name": "api/login",
+			"parameters": [],
+			"parentId": "fld_4daad3e310d04a41901348da1c3fa794",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/auth/login",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f12c625a4db24cbdb12e3569f1ec69d5",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTUzNTg3NTMyNX0.ao0h4sN4QrZezQ0VXuPqKFxOE_l2BXAb32JvjRHIgwY",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1534663315262,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_1165376013c14c98acf86ecfdc33d0a7",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1534663315262,
+			"method": "GET",
+			"modified": 1536054422274,
+			"name": "/api/v1/students",
+			"parameters": [],
+			"parentId": "fld_e2fc079abaab4e72aac0dc57587add8d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/v1/students",
+			"_type": "request"
+		},
+		{
+			"_id": "req_95ccf49a26f94e9a8f337c583e34497f",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nisn\": \"11610037\",\n\t\"name\": \"Saiful\",\n\t\"study\": \"Matematika\"\n}"
+			},
+			"created": 1534664068239,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_252dd7983daf4341b0773713987a1505",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1534664068239,
+			"method": "POST",
+			"modified": 1537697565858,
+			"name": "/api/v1/students",
+			"parameters": [],
+			"parentId": "fld_e2fc079abaab4e72aac0dc57587add8d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/v1/students",
+			"_type": "request"
+		},
+		{
+			"_id": "req_44c8c93ffc324ba2bfa20ddc527b779f",
+			"authentication": {
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTUzNTg3NTMyNX0.ao0h4sN4QrZezQ0VXuPqKFxOE_l2BXAb32JvjRHIgwY",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1534665221339,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1534665221339,
+			"method": "GET",
+			"modified": 1535884588301,
+			"name": "/api/v1/students/:id",
+			"parameters": [],
+			"parentId": "fld_e2fc079abaab4e72aac0dc57587add8d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/v1/students/7",
+			"_type": "request"
+		},
+		{
+			"_id": "req_19b7ccafea01463b849dbc109252fb7c",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nisn\": \"64545\",\n\t\"name\": \"Bejo Sekali\",\n\t\"study\": \"Biology\"\n}"
+			},
+			"created": 1534665618019,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_29f0dcc7e7c44a4c937af01ca7c81c4a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1534665618019,
+			"method": "PUT",
+			"modified": 1534665658894,
+			"name": "/api/v1/students/:id",
+			"parameters": [],
+			"parentId": "fld_e2fc079abaab4e72aac0dc57587add8d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/v1/students/3",
+			"_type": "request"
+		},
+		{
+			"_id": "req_91bb8dd8b3db47eaba35ffaa800f72cc",
+			"authentication": {},
+			"body": {},
+			"created": 1534666099993,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1534666099993,
+			"method": "DELETE",
+			"modified": 1535293112187,
+			"name": "/api/v1/students/:id",
+			"parameters": [],
+			"parentId": "fld_e2fc079abaab4e72aac0dc57587add8d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/v1/students/5",
+			"_type": "request"
+		},
+		{
+			"_id": "req_dcab4f2627a946b3afccde0f5d53f1f3",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1537697388458,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d0348476ae184886a6f54311a03bedf3",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1537697388458,
+			"method": "GET",
+			"modified": 1537699554004,
+			"name": "students/paginate",
+			"parameters": [],
+			"parentId": "fld_e2fc079abaab4e72aac0dc57587add8d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/api/v1/students/paginate",
+			"_type": "request"
+		}
+	]
+}
