@@ -20,9 +20,11 @@ Route.get('/', ({ request }) => {
 })
 
 Route.group(() => {
+  Route.get('students/paginate', 'StudentController.paginate')
   Route.get('students', 'StudentController.index')
   Route.get('students/:id', 'StudentController.show')
   Route.post('students', 'StudentController.store')
-  Route.put('students/:id', 'StudentController.update')
+       .validator('Student')
+  Route.put('students', 'StudentController.update')
   Route.delete('students/:id', 'StudentController.delete')
 }).prefix('api/v1')

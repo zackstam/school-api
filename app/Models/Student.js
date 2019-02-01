@@ -3,12 +3,18 @@
 const Model = use('Model')
 
 class Student extends Model {
-    static get table () {
-        return 'students'
-      }
 
-     static get primaryKey () {
-        return 'id'
+    profile () {
+        return this.hasOne('App/Models/Profile')
+    }
+
+    address () {
+        return this.hasMany('App/Models/Address')
+    }
+    
+    subject() {
+        return this.belongsToMany('App/Models/Subject')
+                   .pivotTable('student_subjects')
     }
 }
 
