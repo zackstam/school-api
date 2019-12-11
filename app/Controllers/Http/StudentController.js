@@ -15,9 +15,7 @@ class StudentController {
         student.nisn = studentInfo.nisn
         student.name = studentInfo.name
         student.study = studentInfo.study
-
         await student.save()
-
         return response.status(201).json(student)
     }
 
