@@ -20,9 +20,21 @@ Route.get('/', ({ request }) => {
 })
 
 Route.group(() => {
-  Route.get('students', 'StudentController.index')
-  Route.get('students/:id', 'StudentController.show')
-  Route.post('students', 'StudentController.store')
-  Route.put('students/:id', 'StudentController.update')
-  Route.delete('students/:id', 'StudentController.delete')
+  Route.get('order/paginate', 'OrderController.paginate')
+  Route.get('order', 'OrderController.index')
 }).prefix('api/v1')
+
+Route.group(() => {
+  Route.get('package/paginate', 'PackageController.paginate')
+  Route.get('package', 'PackageController.index')
+}).prefix('api/v1')
+
+// Route.group(() => {
+//   Route.get('students/paginate', 'StudentController.paginate')
+//   Route.get('students', 'StudentController.index')
+//   Route.get('students/:id', 'StudentController.show')
+//   Route.post('students', 'StudentController.store')
+//        .validator('Student')
+//   Route.put('students', 'StudentController.update')
+//   Route.delete('students/:id', 'StudentController.delete')
+// }).prefix('api/v1')
